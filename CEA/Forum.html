@@ -1,0 +1,208 @@
+<body>
+    <div class="top-bar">
+        <h1>
+             <img class="10p" src="IMG/cealogo.png" alt="Currency Exchange Application" height="90" width="360">
+        </h1>
+        <h2>A-Z</h2>
+
+        <a href="index.html" class="nav1" alt="Forum">| Home |</a>
+        <a href="compare.html" class="nav2" alt="Forum">Compare |</a>
+        <a href="location.html" class="nav3" alt="Forum">Location |</a>
+        <a href="reviews.html" class="nav4" alt="Forum"> Reviews |</a>
+        
+
+            <header>
+  <div class="container">
+    <input type="search" id="searchInput" placeholder="Search for Currency Exchange places">
+  </div>  
+</header>
+<main>
+  <div class="container">
+
+  </div>
+</main>
+        
+    </div>
+    <div class="main">
+        <ol>
+        </ol>
+    </div>
+    
+    <script src="java.js"></script>
+    
+    
+    <script>
+        console.log(threads);
+        var container = document.querySelector('ol');
+        for (let thread of threads) {
+            var html = `
+            <li class="row">
+                <a href="/thread.html?${thread.id}">
+                    <h4 class="title">
+                        ${thread.title}
+                    </h4>
+                    <div class="bottom">
+                        <p class="timestamp">
+                            ${new Date(thread.date).toLocaleString()}
+                        </p>
+                        <p class="comment-count">
+                            ${thread.comments.length} comments
+                        </p>
+                    </div>
+                </a>
+            </li>
+            `
+            container.insertAdjacentHTML('beforeend', html);
+        }
+        
+        
+        const searchInput = document.getElementById('searchInput');
+const userNames = document.querySelectorAll('.title');
+
+
+searchInput.addEventListener('keyup', (e) => {
+  let searchQuery = e.target.value.toLowerCase();
+  for (let i = 0; i < userNames.length; i++) {
+    let currentName = userNames[i].textContent.toLowerCase();
+    if (currentName.includes(searchQuery)) {
+      userNames[i].style.display = "block";
+ 
+    } else {
+      userNames[i].style.display = "none";
+        
+    }
+  }
+});
+    </script>
+    
+    <style>
+        body {
+            margin: 10px 60px;
+        }
+        
+    
+        h1{
+            position: absolute;
+            left: 5px;
+            top: 5px;
+        }
+
+        
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        h1, h4, ol {
+            margin: 0;
+        }
+        h2{
+            position: absolute;
+            left: 1300px;
+            top: -5px;
+        }
+        .nav1{
+            position: absolute;
+            left: 550px;
+            top: 15px;
+            font-size: 20px;
+        }
+           .nav2{
+            position: absolute;
+            left: 623px;
+            top: 15px;
+            font-size: 20px;
+        }
+              .nav3{
+            position: absolute;
+            left: 710px;
+            top: 15px;
+            font-size: 20px;
+        }
+              .nav4{
+            position: absolute;
+            left: 795px;
+            top: 15px;
+            font-size: 20px;
+        }
+a:hover {
+/*  background-color: greenyellow;*/
+      transform: scale(1.06) perspective(1px)
+}
+
+        p {
+            margin: 5px 0;
+        }
+        .top-bar {
+            background-color: white;
+            padding: 20 40px;
+        }
+        .main {
+            background-color: #FAEBD7;
+            padding: 10px 15px;
+        }
+        .row {
+            padding: 5px 0;
+        }
+        .bottom {
+            display: flex;
+            color: grey;
+            font-size: 12px;
+        }
+        .timestamp {
+            padding-right: 10px;
+        }
+        
+        
+        
+        
+        
+
+
+header {
+/*  color: red;*/
+/*  background: darkred;*/
+  padding: 25px;
+       z-index: 100;
+}
+
+header .container {
+  display: flex;
+  
+  align-items: center;
+  justify-content: center;
+    z-index: 100;
+   
+}
+
+label {
+  text-transform: capitalize;
+  font-size: 2rem;
+       z-index: 100;
+}
+
+input {
+  margin-left: 15px;
+  padding: 0.5em;
+  color: black;
+  background: transparent;
+  border: 3px solid black;
+  outline: none;
+  border-radius: 0.2em;
+  width: 50%;
+       z-index: 100;
+    
+}
+
+.container {
+  width: 80%;
+  max-width: 550px;
+  margin: 0 auto;
+       z-index: 100;
+    position: absolute;
+    left: 490px;
+    
+}
+        
+    </style>
+         
+</body>

@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+.section{
+	width: 100%;
+	min-height: 100vh;
+	background: #fdcc04;
+}
+.container{
+	width: 80%;
+	display: block;
+	margin:auto;
+	padding-top: 200px;
+}
+.content-section{
+	float: left;
+	width: 55%;
+}
+.image-section{
+	float: right;
+	width: 40%;
+}
+.image-section img{
+	width: 100%;
+	height: auto;
+}
+.content-section .title{
+	text-transform: uppercase;
+	font-size: 28px;
+}
+.content-section .content h3{
+	margin-top: 20px;
+	color:#5d5d5d;
+	font-size: 21px;
+}
+.content-section .content p{
+	margin-top: 10px;
+	font-family: sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
+.content-section .content .button{
+	margin-top: 30px;
+}
+.content-section .content .button a{
+	background-color: #3d3d3d;
+	padding:12px 40px;
+	text-decoration: none;
+	color:#fff;
+	font-size: 25px;
+	letter-spacing: 1.5px;
+}
+.content-section .content .button a:hover{
+	background-color: #a52a2a;
+	color:#fff;
+}
+.content-section .social{
+	margin: 40px 40px;
+}
+.content-section .social i{
+	color:#a52a2a;
+	font-size: 30px;
+	padding:0px 10px;
+}
+.content-section .social i:hover{
+	color:#3d3d3d;
+}
+@media screen and (max-width: 768px){
+	.container{
+	width: 80%;
+	display: block;
+	margin:auto;
+	padding-top:50px;
+}
+.content-section{
+	float:none;
+	width:100%;
+	display: block;
+	margin:auto;
+}
+.image-section{
+	float:none;
+	width:100%;
+	
+}
+.image-section img{
+	width: 100%;
+	height: auto;
+	display: block;
+	margin:auto;
+}
+.content-section .title{
+	text-align: center;
+	font-size: 19px;
+}
+.content-section .content .button{
+	text-align: center;
+}
+.content-section .content .button a{
+	padding:9px 30px;
+}
+.content-section .social{
+	text-align: center;
+}
+
+}
+nav {
+  height: 80px;
+  background: #fdcc04;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem calc((100vw - 1300px) / 2);
+}
+nav a {
+  text-decoration: none;
+  color: #000;
+
+/*    padding: 10px;*/
+  padding: 0 2rem;
+padding-right:68px;
+
+
+
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+
+
+
+.containerr {
+
+    width:200px;
+
+    position: absolute;
+    left: 800px;
+    top: 20px;
+   
+
+}
+
+.click{
+
+    background-color:green;
+    position: absolute;
+    left: 32px;
+     border-radius: 25px;
+
+}
+
+.click:hover {
+
+    background-color: green;
+
+
+}
+
+.click,.links {
+
+    padding: 12px;
+
+    font-size: 1.2em;
+
+    font-family: futura Md BT;
+
+    border: none;
+
+    outline: none;
+
+    width:200px;
+
+    color: black;
+
+    transition: 0.3s;
+border-radius: 25px;
+
+}
+
+.list {
+
+    position: absolute;
+
+    transform: scaleY(0);
+
+    transform-origin: top;
+
+    transition: 0.3s;
+    
+
+}
+
+.newlist {
+
+    transform: scaleY(1);
+
+}
+
+.links {
+
+    background-color:#fdcc04 ;
+
+}
+
+.links:hover {
+
+    background-color: green;
+
+    transform: scale(1.1);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.popup-button{
+    position: absolute;
+    right: 205px;
+    top: 32px;
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+.popup-button:hover{
+    color: #ffffff;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,0.7);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease-in;
+}
+.popup{
+    margin: 200px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+    width: 40%;
+    height: 330px;
+    position: relative;
+}
+.popup .title{
+    white-space: nowrap ;
+   text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    
+}
+.popup .close{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+.popup .close:hover{
+    color: #06D85F;
+}
+.overlay:target{
+    visibility: visible;
+    opacity: 1;
+}
+.content1{
+      text-align: center;
+       line-height: 2.5;
+}
+.logoo {
+    position: absolute;
+    top: 240px;
+    right: 220px;
+  color: #000;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0 2rem;
+  color: green;
+}
+.logoo1 {
+position: absolute;
+top: 253px;
+    right: 105px;
+  color: #000;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0 7rem;
+  color: orange;
+   
+}
+
+
+
+
+
+
+
+
+
+
